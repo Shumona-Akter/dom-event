@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input</title>
+</head>
+<body>
+    <h1 id="text">change text update input</h1>
+    <input id="input" type="text">
+    <button id="btn">update</button>
+
+
+    <h1 id="best-friend">Write your best friend name</h1>
+    <input id="input-name" type="text">
+    <button id="insert">insert</button>
+
+    <script>
+        const text = document.querySelector('#text');
+        const inputs = document.querySelector('#input');
+        const btn = document.querySelector('#btn');
+
+        btn.addEventListener('click', function(){
+            const inputValue = inputs.value;
+            text.innerText = inputValue;
+            inputs.value = ' '
+            if(inputValue === ' '){
+                text.innerText = 'change text update input'
+            }
+
+        });
+        const bestFriend = document.querySelector('#best-friend');
+        const inputName = document.querySelector('#input-name');
+        const insert = document.querySelector('#insert');
+        insert.addEventListener('click', function(){
+            // const inputText = inputName.value;
+            // bestFriend = inputText;
+            // 1st step
+            bestFriend.innerText = inputName.value;
+            // 2nd step
+            inputName.value = " ";
+        })
+
+
+    </script>
+</body>
+</html>

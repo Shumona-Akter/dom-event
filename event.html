@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tour of event</title>
+</head>
+<body>
+    <h1>Dom special event</h1>
+    <!-- option 1: event handeler. use korbo na -->
+    <button onclick="console.log('hello event')">click me</button>
+    <button onclick="console.log('hello ariyana')">click here</button>
+
+    <h1>lallalla</h1>
+    <button onclick="document.body.style.backgroundColor = 'yellow'">bg yellow</button>
+    <button onclick="document.body.style.background = 'red'">red</button>
+    <button onclick="document.body.style.background='white'">white</button>
+
+
+    <!-- option 2: event handler -->
+    <h1>Option 2: event handeler. sometimes we can use it..</h1>
+    <button onclick="makeGreen()">bg green</button>
+    <button onclick="makeBlue()">bg blue</button>
+    <button onclick="makePurple()">bg purple</button>
+
+    <!-- Option 3: event handler onclick using js. we can not use it -->
+    <h1>Option 3: event handler onclick using js. we can not use it</h1>
+    <button id="make-sky-blue">bg sky blue</button>
+    <button id="tommato">bg tommato</button>
+
+    <!-- Option 4: event handler onclick using js. we can not use it -->
+    <h1>Option 4: event handler onclick using js. we can not use it</h1>
+    <button id="aqua">bg aqua</button>
+
+    <!-- Option 5: addEvenListener . we can use it-->
+    <h1>Option 5: addEvenListener . we can use it</h1>
+    <button id="golden">golden</button>
+
+    <script src="event.js"></script>
+
+
+    <script>
+        // <!-- option 2: event handler -->
+
+        function makeGreen(){
+            document.body.style.background = 'green'
+        }
+        function makeBlue(){
+            document.body.style.background = 'blue';
+        }
+        function makePurple(){
+            document.body.style.background = 'purple'
+        }
+        const makeSkyBlue = document.getElementById('make-sky-blue');
+        makeSkyBlue.onclick = makeskyBlue
+
+        function makeskyBlue(){
+            document.body.style.background = 'skyblue'
+
+        }
+        const h1 = document.getElementsByTagName ('h1')
+        const tommato = document.querySelector('#tommato');
+        tommato.onclick = makeTommato;
+        function makeTommato(){
+            document.body.style.background =' tomato'
+        }
+
+        // Option 4: event handler onclick using js. we can not use it
+
+        const aqua = document.querySelector('#aqua');
+        aqua.onclick = function makeAqua(){
+            document.body.style.background ='aqua'
+
+        }
+
+        // Option 5: addEvenListener . we can use it
+        const golden = document.getElementById('golden');
+        golden.addEventListener('click', function(){
+            document.body.style.background ='gold'
+
+        })
+    </script>
+</body>
+</html>

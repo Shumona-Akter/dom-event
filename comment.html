@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comment</title>
+</head>
+<body>
+    <div id="comment-container">
+        <h1>comment here</h1>
+        <p>hello</p>
+        <textarea name="comment" id="comment-box" cols="30" rows="10"></textarea>
+        <br>
+        <button id="submit">post</button>
+    </div>
+
+    <script>
+        const submit = document.querySelector('#submit');
+        const commentBox = document.querySelector('#comment-box');
+
+        submit.addEventListener('click', function(){
+            const commentPost = commentBox.value;
+            
+            const commentContainer = document.querySelector('#comment-container');
+            const p = document.createElement('p');
+            p.innerText = commentPost;
+            commentContainer.insertBefore(p, commentBox);
+            commentBox.value= ' '
+
+        })
+    </script>
+
+</body>
+</html>

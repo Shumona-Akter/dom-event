@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>most common way set handler</title>
+</head>
+<body>
+    <h2 id="text">default text</h2>
+    <button id="change">change text</button>
+
+    <h3 id="change-me">change me</h3>
+    <button id="click-here">click here</button>
+
+    <script>
+        const change = document.getElementById('change');
+        const text = document.getElementById('text');
+        const changeMe = document.getElementById('change-me');
+        const clickHere = document.getElementById('click-here');
+
+        change.addEventListener('click', function(){
+            text.innerText = "hello event. how are you",
+            text.style.color = "red"
+        })
+
+        clickHere.addEventListener('click', function(){
+            changeMe.innerText = "hello guys. how are you, i am fit and fine",
+            clickHere.style.display = 'none'
+        })
+    </script>
+</body>
+</html>
